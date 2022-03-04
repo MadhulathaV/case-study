@@ -1,0 +1,12 @@
+<div class="container m-3">
+    <div class="d-flex" style="text-align: center;">
+        <div *ngIf="startCount" style="margin-right: 20px;">
+            <h2>{{startCount}}</h2>
+            <h6>Started</h6>
+        </div>
+        <div *ngIf="pauseCount">
+            <h2>{{pauseCount}}</h2>
+            <h6>Paused</h6>
+        </div>
+    </div>
+</div>

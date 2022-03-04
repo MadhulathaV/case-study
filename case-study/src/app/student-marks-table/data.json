@@ -1,0 +1,32 @@
+[{
+    "name": "Ravi",
+    "class": "3",
+    "section": "D",
+    "sub1": "23",
+    "sub2": "36",
+    "sub3": "67"
+  },
+  {
+    "name": "Abdul",
+    "class": "3",
+    "section": "E",
+    "sub1": "67",
+    "sub2": "23",
+    "sub3": "89"
+  },
+  {
+    "name": "Rehman",
+    "class": "3",
+    "section": "F",
+    "sub1": "45",
+    "sub2": "35",
+    "sub3": "77"
+  },
+  {
+    "name": "Vishal",
+    "class": "3",
+    "section": "A",
+    "sub1": "56",
+    "sub2": "98",
+    "sub3": "65"
+  }]

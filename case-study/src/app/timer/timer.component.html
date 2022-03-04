@@ -1,0 +1,10 @@
+<div class="container" style="border: 2px solid black;">
+    <div class="d-flex">
+        <app-component-a style="width: 30%;" [count]="data?.timeLeft"></app-component-a>
+        <app-component-b style="width: 65%;" (sendTimerData)="getCount($event)"></app-component-b>
+    </div>
+    <div class="d-flex">
+        <app-component-c class="w-50" [timeLog]="data?.timeTrack"></app-component-c>
+        <app-component-d class="w-50" [startCount]="data?.startCount" [pauseCount]="data?.pauseCount"></app-component-d>
+    </div>
+</div>

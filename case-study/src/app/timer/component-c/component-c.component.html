@@ -1,0 +1,3 @@
+<div class="container m-3">
+    <div *ngFor="let log of timeLog; let i = index">{{i%2 == 0 ? 'Started' : 'Paused'}} at {{log | date: 'medium'}}</div>
+</div>

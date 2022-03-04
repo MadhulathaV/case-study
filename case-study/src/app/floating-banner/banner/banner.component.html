@@ -1,0 +1,6 @@
+<div class="m-3" style="border: 2px solid black; " [ngClass]="count == 0 ? 'overflow' : ''">
+    <ng-container *ngIf="count">
+        <app-banner [count]="count-1"></app-banner>
+    </ng-container>
+    <h4 *ngIf="count == 0" style="padding: 5px;" class="text">A floating banner text which keeps on rotating</h4>
+</div>

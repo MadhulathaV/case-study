@@ -1,0 +1,16 @@
+<div class="container m-3 p-3" style="border: 2px solid black; min-height: 200px;">
+    <div class="mb-3">
+        <span>Enter Timer Limit </span>
+        <input type="text" name="timer" [formControl]="timer" id="timer">
+    </div>
+    <div class="d-flex">
+        <div class="m-1">
+            <button class="btn btn-outline-dark" (click)="startTimer()">Start / Pause</button>
+        </div>
+        <div class="m-1">
+            <button class="btn btn-outline-dark" (click)="reset()">reset</button>
+        </div>
+    </div>
+    <br>
+    <div *ngFor="let track of pauseTrack">Paused at {{track}}</div>
+</div>

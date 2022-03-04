@@ -1,0 +1,30 @@
+<div class="container" style="margin-top: 40px;">
+    <h5>Grid/List view</h5>
+    <div class="row">
+        <div class="col">
+            <mat-form-field style="float: right;">
+                <mat-label>Price Filters</mat-label>
+                <mat-select name="priceFilter" [(ngModel)]="priceFilter">
+                    <mat-option *ngFor="let price of prices" value="{{price}}">
+                        {{price}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div style="float: right; margin-right: 10px; background-color: #e3a805; border-radius: 5px;">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" (click)="this.gridView = true">apps</mat-icon>
+                <mat-icon aria-hidden="false" aria-label="Example home icon" (click)="this.gridView = false">list</mat-icon>
+            </div>
+        </div>
+    </div>
+    <mat-grid-list *ngIf="gridView" cols="4" rowHeight="2:1" [gutterSize]="'20px'" style="padding-top: 10px;">
+        <mat-grid-tile *ngFor="let product of products"></mat-grid-tile>
+    </mat-grid-list>
+    <!-- <mat-list role="list" *ngIf="!gridView">
+        <mat-list-item role="listitem" *ngFor="let product of products"></mat-list-item>
+    </mat-list> -->
+    <div *ngIf="!gridView" class="d-flex flex-wrap">
+        <mat-card class="border border-dark m-1" style="width: 48%;" *ngFor="let product of products">Product {{product}}</mat-card>
+    </div>
+
+
+</div>

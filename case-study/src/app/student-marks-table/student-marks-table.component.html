@@ -1,0 +1,30 @@
+<div class="container">
+    <h5 class="m-3">Student Marks Table</h5>
+    <!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container *ngFor="let col of displayedColumns" matColumnDef={{col}}>
+            <th mat-header-cell *matHeaderCellDef> {{col | titlecase}} </th>
+            <td mat-cell *matCellDef="let element"> {{element[col]}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table> -->
+
+    <table matSort (matSortChange)="sortData($event)">
+        <tr>
+          <th *ngFor="let header of displayedColumns" mat-sort-header={{header}}>{{header}}</th>
+        </tr>
+      
+        <tr *ngFor="let student of sortedStudents">
+          <td>{{student.name}}</td>
+          <td>{{student.class}}</td>
+          <td>{{student.section}}</td>
+          <td>{{student.sub1}}</td>
+          <td>{{student.sub2}}</td>
+          <td>{{student.sub3}}</td>
+        </tr>
+      </table>
+      
+</div>
+
